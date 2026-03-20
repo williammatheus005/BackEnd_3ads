@@ -1,0 +1,12 @@
+const carne = {
+    tipo: "picanha",
+    preco: 150.0,
+    maturata: false,
+    preparo: ["assada", "forno", "cozida"]
+}
+console.log(carne)
+console.log(carne.tipo)
+console.log(carne.preco)
+console.log(carne.maturata)
+console.log(carne.preparo[0])
+
