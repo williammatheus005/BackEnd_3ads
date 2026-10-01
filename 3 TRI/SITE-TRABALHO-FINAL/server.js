@@ -13,4 +13,4 @@ app.get('/', (req, res) => {
 } )
 
 //liberar a porta do meu computador
-app.listen(porta, () => { console.log('Servidor está vivo!')})
+app.listen(porta, () => { console.log('Servidor está vivo!')})-

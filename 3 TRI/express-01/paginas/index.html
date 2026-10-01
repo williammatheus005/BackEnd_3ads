@@ -1,13 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confeitaria Artística - Bolos de Festa</title>
+    <!-- Importação das Fontes Mapeadas nos Requisitos -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome para os ícones modernos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="../../estilos/index.css">
-    <title>inicio doces</title>
 </head>
 <body>
-    <h3>pagina inicial</h3>
-    <p>detalhes pagina inicial</p>
+
+    <!-- Menu de Navegação com Rotas Express -->
+    <header class="navbar">
+        <div class="logo">
+            Sugar<span class="script-logo">Art</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Início</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/produto">Produto</a></li>
+                <li><a href="/servicos">Serviços</a></li>
+            </ul>
+        </nav>
+        <a href="#agendamento" class="btn-nav">Reservar Data</a>
+    </header>
+
+    <!-- Seção Hero (Apresentação Principal) -->
+    <section class="hero">
+        <!-- Overlay escuro para garantir contraste e leitura do texto -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Simulação do background em vídeo/animação mapeado nos requisitos -->
+        <div class="hero-bg-simulation"></div>
+
+        <div class="hero-content">
+            <span class="subtitle-script">Momentos Especiais</span>
+            <h1>O CENTRO DAS ATENÇÕES DA SUA FESTA</h1>
+            <p class="headline">Bolos artísticos que traduzem o seu momento em sabor. Deixe a sobremesa principal do seu evento com quem entende de perfeição.</p>
+            
+            <div class="hero-ctas">
+                <a href="#configurador" class="btn btn-primary">Montar Meu Bolo Perfeito</a>
+                <a href="/servicos" class="btn btn-secondary">Ver Modelos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Diferenciais / Quebra de Objeções -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>POR QUE NOS ESCOLHER?</h2>
+                <p>Segurança e perfeição do clique até a primeira fatia.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Card 1: Entrega Climatizada -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3>Carro Climatizado</h3>
+                    <p>Agendamento seguro com entrega própria em veículo refrigerado para garantir a estrutura do bolo.</p>
+                </div>
+
+                <!-- Card 2: Pontualidade -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3>Garantia de Pontualidade</h3>
+                    <p>Compromisso rigoroso com o horário do seu evento ou seu dinheiro de volta sem burocracia.</p>
+                </div>
+
+                <!-- Card 3: Alta Confeitaria -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3>Tall Cakes Artísticos</h3>
+                    <p>Bolos altos decorados com buttercream contemporâneo, flores artísticas e acabamento impecável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2026 SugarArt Confeitaria Artística. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

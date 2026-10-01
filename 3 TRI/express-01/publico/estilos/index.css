@@ -1,4 +1,307 @@
-*{
-    background-color: rgb(115, 115, 236);
-    color: aliceblue;
+/* ==========================================================================
+   1. Variáveis de Design & Resets
+   ========================================================================== */
+:root {
+    --primary: #d4a373;       /* Dourado/Mel sutil */
+    --secondary: #faedcd;     /* Tons pastel de creme */
+    --accent-pink: #fbc4ab;   /* Rosa millennial pastel para detalhes */
+    --dark: #1f1f1f;          /* Cinza escuro corporativo */
+    --light: #f8f9fa;         /* Fundo limpo */
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadows solicitadas */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Tipografia de corpo acessível */
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. Menu de Navegação (Navbar)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--white);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.02);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.script-logo {
+    font-family: 'Great Vibes', cursive;
+    text-transform: none;
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-left: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.btn-nav {
+    text-decoration: none;
+    padding: 10px 22px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn-nav:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* ==========================================================================
+   3. Seção Hero (Impacto & Copy)
+   ========================================================================== */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* Simulação de fundo estético refinado (substituindo o loop de vídeo) */
+.hero-bg-simulation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://unsplash.com') center/cover no-repeat;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.subtitle-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--accent-pink);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.headline {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Botões de Ação */
+.hero-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(212, 163, 115, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #c29263;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--dark);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. Diferenciais (Cards Flutuantes com Soft Shadows)
+   ========================================================================== */
+.features {
+    padding: 100px 0;
+    background-color: var(--light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo Duotone / Pastel Moderno mapeado nos requisitos */
+.feature-card {
+    background-color: var(--white);
+    padding: 50px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow); /* Soft Shadow aplicada */
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.01);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary); /* Fundo tom pastel */
+    color: var(--primary);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 25px auto;
+    transition: var(--transition);
+}
+
+.feature-card:nth-child(2) .feature-icon {
+    background-color: var(--accent-pink); /* Alternância de tons pastel */
+    color: #e5989b;
+}
+
+.feature-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. Rodapé (Footer)
+   ========================================================================== */
+.footer {
+    background-color: var(--dark);
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
 }
